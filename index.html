@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bingo Time!</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Bootstrap css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- Bootstrap ICONS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+    <body onload="generateArr();">
+
+        <div class="alert alert-dark text-center text-success border-bottom-success" role="alert">
+            <h1>BINGO Time!</h1>
+        </div>
+
+        <!--p id="arr"></p>
+        <p id="arr0"></p>
+        <p id="arr1"></p>
+        <p id="arr2"></p>
+        <p id="arr3"></p>
+        <p-- id="arr4"></p-->
+
+        <div id="overlay" class="text-center h1 text-primary" onclick="winning_msg_off()">You Won!</div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4 mx-auto border-bottom border-2 border-dark text-center">
+                    <h6>Let's Play!</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 p-2 mx-auto text-center">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="border-end align-middle text-center" id="pos0" onclick="clickBingo(0);">--</td>
+                                <td class="border-end align-middle text-center" id="pos1" onclick="clickBingo(1);">--</td>
+                                <td class="border-end align-middle text-center" id="pos2" onclick="clickBingo(2);">--</td>
+                                <td class="border-end align-middle text-center" id="pos3" onclick="clickBingo(3);">--</td>
+                                <td class="align-middle text-center" id="pos4" onclick="clickBingo(4);">--</td>
+                            </tr>
+                            <tr>
+                                <td class="border-end align-middle text-center" id="pos5" onclick="clickBingo(5);">--</td>
+                                <td class="border-end align-middle text-center" id="pos6" onclick="clickBingo(6);">--</td>
+                                <td class="border-end align-middle text-center" id="pos7" onclick="clickBingo(7);">--</td>
+                                <td class="border-end align-middle text-center" id="pos8" onclick="clickBingo(8);">--</td>
+                                <td class="align-middle text-center" id="pos9" onclick="clickBingo(9);">--</td>
+                            </tr>
+                            <tr>
+                                <td class="border-end align-middle text-center" id="pos10" onclick="clickBingo(10);">--</td>
+                                <td class="border-end align-middle text-center" id="pos11" onclick="clickBingo(11);">--</td>
+                                <td class="border-end align-middle text-center" id="pos12" onclick="clickBingo(12);">--</td>
+                                <td class="border-end align-middle text-center" id="pos13" onclick="clickBingo(13);">--</td>
+                                <td class="align-middle text-center" id="pos14" onclick="clickBingo(14);">--</td>
+                            </tr>
+                            <tr>
+                                <td class="border-end align-middle text-center" id="pos15" onclick="clickBingo(15);">--</td>
+                                <td class="border-end align-middle text-center" id="pos16" onclick="clickBingo(16);">--</td>
+                                <td class="border-end align-middle text-center" id="pos17" onclick="clickBingo(17);">--</td>
+                                <td class="border-end align-middle text-center" id="pos18" onclick="clickBingo(18);">--</td>
+                                <td class="align-middle text-center" id="pos19" onclick="clickBingo(19);">--</td>
+                            </tr>
+                            <tr>
+                                <td class="border-end removebot align-middle text-center" id="pos20" onclick="clickBingo(20);">--</td>
+                                <td class="border-end removebot align-middle text-center" id="pos21" onclick="clickBingo(21);">--</td>
+                                <td class="border-end removebot align-middle text-center" id="pos22" onclick="clickBingo(22);">--</td>
+                                <td class="border-end removebot align-middle text-center" id="pos23" onclick="clickBingo(23);">--</td>
+                                <td class="removebot align-middle text-center" id="pos24" onclick="clickBingo(24);">--</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-2">
+            <h3 class="text-center text-info">
+                <span id="bin1">B</span>
+                <span id="bin2">I</span>
+                <span id="bin3">N</span>
+                <span id="bin4">G</span>
+                <span id="bin5">O</span>
+            </h3>
+        </div>
+
+        <script src="script.js"></script>
+        <!-- Bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>
